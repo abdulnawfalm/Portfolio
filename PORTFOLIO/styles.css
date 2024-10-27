@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Satoshi', sans-serif;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    color: #2E2E2E;
+  }
+  
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 15rem;
+  }
+  
+  nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20%;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: black;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover {
+    color: #0008ff;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .intro {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .intro p {
+    font-size: 18px;
+    color: #868686;
+  }
+  
+  .work {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .work h2 {
+    margin-bottom: 20px;
+  }
+  
+  .work-images {
+    display: grid; /* Use grid layout for better control */
+    grid-template-columns: repeat(2, 1fr); /* Two images per row */
+    gap: 20px; /* Space between images */
+  }
+  
+  .work-item {
+    text-align: center; /* Center text under images */
+  }
+  
+  .work-images img {
+    width: 100%; /* Full width of the grid cell */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for the transform property */
+  }
+  
+  .work-images img:hover {
+    transform: scale(1.05); /* Scale the image slightly on hover */
+  }
+  
+  .work-info {
+    margin-top: 10px; /* Space between image and text */
+    padding: 10px; /* Padding around text */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  
+  
+  .contact {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .contact button {
+    margin-top: 2rem;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0008ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact button:hover {
+    background-color: #262c40;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  .modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+ /* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+      display: none; /* Hide menu by default */
+      flex-direction: column; /* Stack items vertically */
+      gap: 10px; /* Space between menu items */
+      position: absolute; /* Positioning for the dropdown */
+      top: 60px; /* Below the header */
+      right: 20px; /* Align with the right */
+      background-color: #fff; /* Background color for the menu */
+      padding: 10px; /* Padding around the menu */
+      border-radius: 5px; /* Rounded corners */
+      z-index: 1000; /* Ensure it appears above other content */
+    }
+    
+    nav ul.active {
+      display: flex; /* Show menu when active */
+    }
+  
+    .hamburger {
+      display: block; /* Show hamburger on mobile */
+    }
+  
+    .work-images {
+      display: grid; /* Use grid layout */
+      grid-template-columns: repeat(2, 1fr); /* Two images per row */
+      gap: 10px; /* Reduced gap for mobile */
+    }
+  
+    .work-images img {
+      width: 100%; /* Full width for images in mobile view */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .intro {
+      padding: 20px 10px; /* Adjust padding for smaller screens */
+    }
+  
+    .intro p {
+      font-size: 16px; /* Slightly smaller font for mobile */
+    }
+  
+    .contact button {
+      padding: 8px 15px; /* Adjust button padding for mobile */
+      font-size: 14px; /* Slightly smaller font for mobile */
+    }
+  }
+  
+  
